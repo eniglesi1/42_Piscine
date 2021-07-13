@@ -1,15 +1,21 @@
 /*#include <stdio.h>*/
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int a;
+	int	a;
 
-	a = size;
+	a = 0;
 	while (size > 1)
 	{
 		*dest = *src;
 		dest++;
 		src++;
 		size--;
+		a++;
+	}
+	while (*src)
+	{
+		a++;
+		src++;
 	}
 	*dest = '\0';
 	return (a);

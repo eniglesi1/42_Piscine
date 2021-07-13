@@ -1,5 +1,5 @@
 /*#include <stdio.h>*/
-char	*ft_lowercase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	char	*aux;
 
@@ -26,9 +26,9 @@ char	*ft_lowercase(char *str)
 	emp = empty;
 
 	printf("\n\nBefore: %s\n", string);
-	printf("After : %s\n\n", ft_strlowercase(str));
+	printf("After : %s\n\n", ft_strlowcase(str));
 	printf("Before: %s\n", weird);
-	printf("After : %s\n\n", ft_strlowercase(wei));
-	printf("Empty : -%s-\n\n", ft_strlowercase(emp));
+	printf("After : %s\n\n", ft_strlowcase(wei));
+	printf("Empty : -%s-\n\n", ft_strlowcase(emp));
 	return (0);
 }*/

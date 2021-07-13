@@ -8,7 +8,7 @@ void	ft_putstr_non_printable(char *str)
 	aux = "0123456789abcdef";
 	while (*str)
 	{
-		if (*str < 32 || *str == 127)
+		if (*str < 32 || *str > 127)
 		{
 			write(1, "\\", 1);
 			i = *str / 16;

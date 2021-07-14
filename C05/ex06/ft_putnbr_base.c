@@ -21,6 +21,8 @@ int	ft_is_prime(int nb)
 	{
 		if (nb % n == 0)
 			return (0);
+		else if (n >= 46341)
+			return (0);
 		n++;
 	}
 	return (1);

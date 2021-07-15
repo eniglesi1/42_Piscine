@@ -2,19 +2,14 @@
 #include <stdlib.h>*/
 int	ft_revolution(char *str, int a, int b)
 {
-	if (*str > 47 && *str < 58)
+	a = a % 2;
+	while (*str > 47 && *str < 58)
 	{
-		a = a % 2;
-		while (*str > 47 && *str < 58)
-		{
-			b = (b * 10) + (*str - 48);
-			str++;
-		}
-		if (a == 1)
-			b = b * -1;
+		b = (b * 10) + (*str - 48);
+		str++;
 	}
-	else
-		return (0);
+	if (a == 1)
+		b = b * -1;
 	return (b);
 }
 
@@ -25,23 +20,14 @@ int	ft_atoi(char *str)
 
 	b = 0;
 	a = 0;
-	if (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v'
-		|| *str == '\f' || *str == '\r')
+	while (*str == ' ' || *str == '\n' || *str == '\t'
+		   || *str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+	while (*str == '-' || *str == '+')
 	{
-		while (*str == ' ' || *str == '\n' || *str == '\t'
-			   || *str == '\v' || *str == '\f' || *str == '\r')
-			str++;
-	}
-	else
-		return (0);
-	if (*str == '-' || *str == '+')
-	{
-		while (*str == '-' || *str == '+')
-		{
-			if (*str == '-')
-				a++;
-			str++;
-		}
+		if (*str == '-')
+			a++;
+		str++;
 	}
 	b = ft_revolution(str, a, b);
 	return (b);

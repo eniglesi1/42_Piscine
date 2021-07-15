@@ -6,7 +6,7 @@
 /*   By: jgomez-a <jgomez-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:57:50 by jgomez-a          #+#    #+#             */
-/*   Updated: 2021/07/14 17:05:34 by jgomez-a         ###   ########.fr       */
+/*   Updated: 2021/07/14 17:36:05 by eniglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void	ft_putnbr_base_rec(int nbr, char *base, int size)
 	write(1, &a, 1);
 }
 
-int		ft_ver_bas(char *base)
+int	ft_ver_bas(char *base)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (base[i] != '\0')
@@ -48,7 +48,7 @@ int		ft_ver_bas(char *base)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int s;
+	int	s;
 
 	s = 0;
 	if (ft_ver_bas(base) == 1)
